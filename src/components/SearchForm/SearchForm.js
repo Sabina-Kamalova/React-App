@@ -4,9 +4,11 @@ import Button from '../Button/Button';
 
 const SearchForm = () => {
     return (
-        <form>
-            <input type="text" />
-            <button>Add column</button>
+        <form className={styles.searchForm}>
+            <TextInput placeholder="Search..." />
+            <Button>
+                <span className="fa fa-search" />
+            </Button>
         </form>
     );
   };
