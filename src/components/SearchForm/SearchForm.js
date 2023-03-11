@@ -1,17 +1,32 @@
-import TextInput from '../TextInput/TextInput';
-import styles from './SearchForm.module.scss';
-import Button from '../Button/Button';
+import TextInput from "../TextInput/TextInput";
+import styles from "./SearchForm.module.scss";
+import Button from "../Button/Button";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 const SearchForm = () => {
-    return (
-        <form className={styles.searchForm}>
-            <TextInput placeholder="Search..." />
-            <Button>
-                <span className="fa fa-search" />
-            </Button>
-        </form>
-    );
+  const [search, setSearch] = useState("");
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch({ type: "UPDATE_SEARCHSTRING", payload:  search  });
+
   };
 
+  return (
+    <form onSubmit={handleSubmit} className={styles.searchForm}>
+      <TextInput
+        value={search}
+        placeholder="Search..."
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <Button>
+        <span className="fa fa-search" />
+      </Button>
+    </form>
+  );
+};
 
-  export default SearchForm;
+export default SearchForm;

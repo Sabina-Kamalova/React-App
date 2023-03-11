@@ -2,7 +2,7 @@ import styles from "./List.module.scss";
 import Column from "../Column/Column";
 import { useSelector } from "react-redux";
 import ColumnForm from "../ColumnForm/ColumnForm";
-import CardForm from "../CardForm/CardForm";
+//import CardForm from "../CardForm/CardForm";
 
 const List = () => {
   const columns = useSelector((state) => state.columns);
