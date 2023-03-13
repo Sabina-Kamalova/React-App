@@ -10,10 +10,6 @@
     background-color: darken($color-dark, 3%);
 }
 
-.nav {
-    background-color: darken($color-dark, 3%);
-}
-
 a {
     font-size: 14px;
     font-weight: 700;
@@ -32,3 +28,6 @@ a {
     display: inline-flex;
 } 
 
+.linkActive {
+    color: $color-warning;
+}
