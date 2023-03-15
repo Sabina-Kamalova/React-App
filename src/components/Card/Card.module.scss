@@ -11,3 +11,17 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+.button {
+    background: inherit;
+    border: 0;
+}
+
+.icon:hover {
+    color: yellow;
+    cursor:pointer;
+}
+
+.isFavorite {
+    color: yellow;
+}
