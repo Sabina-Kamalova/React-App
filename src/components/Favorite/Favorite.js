@@ -9,6 +9,13 @@ const Favorite = () => {
 
   const cards = useSelector(getFavoriteCards);
 
+    if (cards.length === 0)
+    return (
+      <div>
+        <PageTitle>No favorites cards</PageTitle>
+      </div>
+    );
+
     return (
         <div>
         <PageTitle>Favorite</PageTitle>
