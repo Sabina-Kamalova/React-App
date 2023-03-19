@@ -17,11 +17,18 @@
     border: 0;
 }
 
-.icon:hover {
-    color: yellow;
-    cursor:pointer;
+.icon {
+    color: $color-dark;
+    opacity: 0.7;
+    
+     
+    &:hover {
+        cursor:pointer;
+        opacity: 1;
+    }
 }
 
 .isFavorite {
-    color: yellow;
+    color: $color-warning;
+    opacity: 1;
 }
