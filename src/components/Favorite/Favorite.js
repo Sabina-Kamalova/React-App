@@ -7,7 +7,7 @@ import { getFavoriteCards } from '../../redux/store';
 const Favorite = () => {
   
 
-  const cards = useSelector(getFavoriteCards)
+  const cards = useSelector(getFavoriteCards);
 
     return (
         <div>
@@ -15,7 +15,7 @@ const Favorite = () => {
         <article className={styles.column}>
           <ul className={styles.cards}>
             {cards.map((card) => (
-            <Card title={card.title} />
+            <Card key={card.id} title={card.title} isFavorite={card.isFavorite}/>
             ))}
           </ul>
           </article>
