@@ -3,7 +3,7 @@ import styles from "./SearchForm.module.scss";
 import Button from "../Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { updateSearch, getSearchString } from "../../redux/store";
+import { updateSearch, getSearchString } from "../../redux/searchStringRedux";
 
 const SearchForm = () => {
   const searchString = useSelector(getSearchString);
@@ -14,7 +14,7 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateSearch( search ));
-    setSearch('')
+    setSearch(search);
   };
   
 
